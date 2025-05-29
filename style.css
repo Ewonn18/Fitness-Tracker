@@ -1,0 +1,116 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+  color: #fff;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  background-color: #121212;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 15px #00fff7;
+}
+
+h1 {
+  text-align: center;
+  color: #00fff7;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form input, form select, form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #00fff7;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #00cccc;
+}
+
+.filters {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button,
+.filter-buttons select {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  background: #222;
+  margin: 0.3rem 0;
+  padding: 0.6rem;
+  border-radius: 8px;
+}
+
+.task.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.progress-bar {
+  background: #333;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+#progress-fill {
+  height: 100%;
+  background: #00fff7;
+  width: 0;
+  transition: width 0.3s;
+}
+
+#success-message {
+  text-align: center;
+  color: #0f0;
+  font-weight: bold;
+  margin-top: 10px;
+}

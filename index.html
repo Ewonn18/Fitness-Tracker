@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fitness To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏋️ Fitness To-Do</h1>
+
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Add a workout task..." required />
+      <select id="category-input">
+        <option value="">Choose Category</option>
+        <option value="Cardio">Cardio</option>
+        <option value="Strength">Strength</option>
+        <option value="Flexibility">Flexibility</option>
+      </select>
+      <button type="submit">Add</button>
+    </form>
+
+    <div class="filters">
+      <input type="text" id="search-input" placeholder="Search tasks..." />
+      <div class="filter-buttons">
+        <button data-filter="all">Show All</button>
+        <button data-filter="active">Show Active</button>
+        <button data-filter="completed">Show Completed</button>
+        <select id="category-filter">
+          <option value="">All Categories</option>
+          <option value="Cardio">Cardio</option>
+          <option value="Strength">Strength</option>
+          <option value="Flexibility">Flexibility</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="progress-container">
+      <label>Progress</label>
+      <div class="progress-bar">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+
+    <p id="success-message" style="display: none;">🏆 All tasks completed! Great job!</p>
+
+    <ul id="task-list"></ul>
+  </div>
+</body>
+</html>
